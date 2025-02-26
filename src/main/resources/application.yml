@@ -1,0 +1,25 @@
+﻿Spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/develop}
+    username: ${DB_USER:root}
+    password: ${DB_PASS:0000}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+server:
+  servlet:
+    session:
+      timeout: 30m
+      tracking-modes: cookie
+
+jwt:
+  header: Authorization
+  secret: c2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQtc2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQK
+  token-validity-in-seconds: 86400
