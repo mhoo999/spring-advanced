@@ -16,5 +16,8 @@ public class UserChangePasswordRequest {
     private String oldPassword;
 
     @NotBlank
+    @Size(min = 9)
+    @Pattern(regexp = ".*\\d.*")
+    @Pattern(regexp = ".*[A-Z].*")
     private String newPassword;
 }
