@@ -21,4 +21,5 @@ public class SignupRequest {
 
     @NotBlank
     private String userRole;
+
 }
